@@ -1,0 +1,58 @@
+﻿@model Evento
+
+@{
+    ViewData["Title"] = "Cadastrar Evento";
+}
+
+<h2 class="text-orange fw-bold text-center">Cadastrar Novo Evento</h2>
+
+<form asp-action="Cadastrar" method="post" class="shadow-lg p-4 rounded bg-white">
+    <div class="mb-3">
+        <label class="form-label fw-bold text-dark">Nome do Evento</label>
+        <input asp-for="Nome" class="form-control" placeholder="Digite o nome do evento" required />
+    </div>
+    <div class="mb-3">
+        <label class="form-label fw-bold text-dark">Local do Evento</label>
+        <input asp-for="Local" class="form-control" placeholder="Digite o local do evento" required />
+    </div>
+    <div class="mb-3">
+        <label class="form-label fw-bold text-dark">Data do Evento</label>
+        <input asp-for="Data" class="form-control" type="date" required />
+    </div>
+    <div class="mb-3">
+        <label class="form-label fw-bold text-dark">Data do preparo do evento</label>
+        <input asp-for="DataDePreparacao" class="form-control" type="date" required />
+    </div>
+    <div class="text-center mt-4">
+        <button type="submit" class="btn btn-orange btn-lg">💾 Salvar</button>
+        <a asp-action="Index" class="btn btn-secondary btn-lg ms-2">❌ Cancelar</a>
+    </div>
+</form>
+
+<style>
+    .text-orange {
+        color: #ff7f00;
+    }
+
+    .btn-orange {
+        background: linear-gradient(90deg, #ff7f00, #ff4500);
+        color: white;
+        padding: 12px 24px;
+        border-radius: 25px;
+        transition: 0.3s;
+        font-weight: bold;
+        border: none;
+    }
+
+        .btn-orange:hover {
+            background: linear-gradient(90deg, #ff4500, #ff7f00);
+            transform: scale(1.05);
+        }
+
+    .shadow-lg {
+        max-width: 600px;
+        margin: auto;
+        background: #f8f9fa;
+        border-radius: 10px;
+    }
+</style>

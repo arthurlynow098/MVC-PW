@@ -1,0 +1,89 @@
+﻿@model Evento
+
+@{
+    ViewData["Title"] = "Editar Evento";
+}
+
+<h2 class="text-center text-dark fw-bold">Editar Evento</h2>
+
+<form asp-action="Editar" method="post" class="edit-form">
+    <input asp-for="Id" type="hidden" />
+
+    <div class="mb-3">
+        <label class="form-label">Nome do Evento</label>
+        <input asp-for="Nome" class="form-control input-custom" required />
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Local do Evento</label>
+        <input asp-for="Local" class="form-control input-custom" required />
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Data do Evento</label>
+        <input asp-for="Data" class="form-control input-custom" type="date" required />
+    </div>
+    <div class="mb-3">
+        <label class="form-label fw-bold text-dark">Data do preparo do evento</label>
+        <input asp-for="DataDePreparacao" class="form-control" type="date" required />
+    </div>
+
+    <div class="text-center mt-4">
+        <button type="submit" class="btn btn-save">Salvar Alterações</button>
+        <a asp-action="Index" class="btn btn-cancel">Cancelar</a>
+    </div>
+</form>
+
+<style>
+    .edit-form {
+        max-width: 600px;
+        margin: auto;
+        background: #ffffff;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+        color: #ff7f00;
+        font-size: 26px;
+        margin-bottom: 20px;
+    }
+
+    .input-custom {
+        border-radius: 8px;
+        border: 1px solid #ced4da;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .btn-save {
+        background: linear-gradient(90deg, #ff7f00, #ff4500);
+        color: white;
+        padding: 12px 24px;
+        border-radius: 8px;
+        font-weight: bold;
+        transition: all 0.3s;
+        border: none;
+    }
+
+        .btn-save:hover {
+            background: linear-gradient(90deg, #ff4500, #ff7f00);
+            transform: scale(1.05);
+        }
+
+    .btn-cancel {
+        background: #6c757d;
+        color: white;
+        padding: 12px 24px;
+        border-radius: 8px;
+        font-weight: bold;
+        transition: all 0.3s;
+        text-decoration: none;
+    }
+
+        .btn-cancel:hover {
+            background: #5a6268;
+            transform: scale(1.05);
+        }
+</style>

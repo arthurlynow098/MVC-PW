@@ -1,0 +1,99 @@
+﻿@model List<Celular>
+
+@{
+    ViewData["Title"] = "Gerenciamento de Celular";
+}
+
+<h2 class="text-dark fw-semibold">Gerenciamento de Celulares</h2>
+<a asp-action="Cadastrar" class="btn btn-modern mb-3">➕ Adicionar Celular</a>
+<table class="table custom-table shadow rounded">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Marca</th>
+            <th>Modelo</th>
+            <th>Preço</th>
+            <th class="text-center">Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var Celular in Model)
+        {
+            <tr>
+                <td>@Celular.Id</td>
+                <td>@Celular.Marca</td>
+                <td>@Celular.Modelo</td>
+                <td>R$ @Celular.Preco</td>
+                <td class="text-center">
+                    <a asp-action="Visualizar" asp-route-id="@Celular.Id" class="btn btn-view">🔍</a>
+                    <a asp-action="Editar" asp-route-id="@Celular.Id" class="btn btn-edit">✏️</a>
+                    <a asp-action="Excluir" asp-route-id="@Celular.Id" class="btn btn-delete">🗑</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<style>
+    .btn-modern {
+        background: linear-gradient(90deg, #ff7b00, #ff5500);
+        color: white;
+        padding: 10px 20px;
+        border-radius: 20px;
+        transition: 0.3s;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+        .btn-modern:hover {
+            background: linear-gradient(90deg, #ff5500, #ff7b00);
+            transform: scale(1.05);
+        }
+
+    .custom-table {
+        border-collapse: separate;
+        border-spacing: 0;
+        width: 100%;
+        background: white;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+        .custom-table thead {
+            background: #ff7b00;
+            color: white;
+        }
+
+        .custom-table th, .custom-table td {
+            padding: 12px;
+            text-align: center;
+        }
+
+    .btn-view {
+        background: #17a2b8;
+        color: white;
+        padding: 6px 10px;
+        border-radius: 5px;
+        text-decoration: none;
+    }
+
+    .btn-edit {
+        background: #ffc107;
+        color: white;
+        padding: 6px 10px;
+        border-radius: 5px;
+        text-decoration: none;
+    }
+
+    .btn-delete {
+        background: #dc3545;
+        color: white;
+        padding: 6px 10px;
+        border-radius: 5px;
+        text-decoration: none;
+    }
+
+        .btn-view:hover, .btn-edit:hover, .btn-delete:hover {
+            opacity: 0.8;
+        }
+</style>

@@ -1,0 +1,84 @@
+﻿@{
+    ViewData["Title"] = "Painel de Controle";
+}
+
+<div class="container text-center mt-5">
+    <h1 class="display-3 text-dark fw-semibold">Painel de Controle</h1>
+    <p class="lead text-muted">ASP .NET CORE | MVC</p>
+</div>
+
+<div class="row mt-5 d-flex justify-content-center">
+    <div class="col-lg-3 col-md-6">
+        <div class="custom-card">
+            <h5 class="custom-card-title">Carros</h5>
+            <p class="custom-card-text">Acompanhe sua frota e descubra novos modelos.</p>
+            <a asp-controller="Carro" asp-action="Index" class="custom-btn">Acessar</a>
+        </div>
+    </div>
+
+    <div class="col-lg-3 col-md-6">
+        <div class="custom-card">
+            <h5 class="custom-card-title">Celulares</h5>
+            <p class="custom-card-text">Gerencie modelos e especificações técnicas.</p>
+            <a asp-controller="Celular" asp-action="Index" class="custom-btn">Acessar</a>
+        </div>
+    </div>
+
+    <div class="col-lg-3 col-md-6">
+        <div class="custom-card">
+            <h5 class="custom-card-title">Eventos</h5>
+            <p class="custom-card-text">Organize eventos e gerencie ingressos facilmente.</p>
+            <a asp-controller="Evento" asp-action="Index" class="custom-btn">Acessar</a>
+        </div>
+    </div>
+</div>
+
+<style>
+    body {
+        background-color: #f4f4f9;
+        font-family: 'Arial', sans-serif;
+    }
+
+    .custom-card {
+        background: white;
+        padding: 25px;
+        border-radius: 12px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+        .custom-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+    .custom-card-title {
+        font-size: 20px;
+        font-weight: bold;
+        color: #333;
+    }
+
+    .custom-card-text {
+        color: #666;
+        font-size: 14px;
+    }
+
+    .custom-btn {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 10px 20px;
+        background: #ff7b00;
+        color: white;
+        font-weight: bold;
+        text-decoration: none;
+        border-radius: 6px;
+        transition: background 0.3s, transform 0.3s;
+    }
+
+        .custom-btn:hover {
+            background: #ff5500;
+            transform: scale(1.05);
+        }
+</style>

@@ -1,0 +1,98 @@
+﻿@model List<Celular>
+
+@{
+    ViewData["Title"] = "Gerenciamento de Celulares";
+}
+
+<h2 class="text-dark fw-semibold">Gerenciamento de Celulares</h2>
+<a asp-action="Cadastrar" class="btn btn-modern mb-3">➕ Adicionar Celular</a>
+<a asp-action="GerarPDF" class="btn btn-pdf mb-3">📄 Gerar PDF</a>
+
+<table class="table custom-table shadow rounded">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Marca</th>
+            <th>Modelo</th>
+            <th>Preço</th>
+            <th>Data de Fabricação</th>
+            <th class="text-center">Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var celular in Model)
+        {
+            <tr>
+                <td>@celular.Id</td>
+                <td>@celular.Marca</td>
+                <td>@celular.Modelo</td>
+                <td>R$ @celular.Preco</td>
+                <td>@celular.DataFabricacao.ToString("dd/MM/yyyy")</td>
+                <td class="text-center">
+                    <a asp-action="Visualizar" asp-route-id="@celular.Id" class="btn btn-view">🔍</a>
+                    <a asp-action="Editar" asp-route-id="@celular.Id" class="btn btn-edit">✏️</a>
+                    <a asp-action="Excluir" asp-route-id="@celular.Id" class="btn btn-delete">🗑</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<style>
+    .btn-modern {
+        background: linear-gradient(90deg, #ff7b00, #ff5500);
+        color: white;
+        padding: 10px 20px;
+        border-radius: 20px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .btn-pdf {
+        background: linear-gradient(90deg, #008cff, #0057ff);
+        color: white;
+        padding: 10px 20px;
+        border-radius: 20px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .custom-table {
+        border-collapse: separate;
+        border-spacing: 0;
+        width: 100%;
+        background: white;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+        .custom-table thead {
+            background: #ff7b00;
+            color: white;
+        }
+
+        .custom-table th, .custom-table td {
+            padding: 12px;
+            text-align: center;
+        }
+
+    .btn-edit {
+        background: #ffc107;
+        color: white;
+        padding: 6px 10px;
+        border-radius: 5px;
+        text-decoration: none;
+    }
+
+    .btn-delete {
+        background: #dc3545;
+        color: white;
+        padding: 6px 10px;
+        border-radius: 5px;
+        text-decoration: none;
+    }
+
+        .btn-edit:hover, .btn-delete:hover {
+            opacity: 0.8;
+        }
+</style>

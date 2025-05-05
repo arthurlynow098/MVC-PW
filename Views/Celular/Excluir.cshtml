@@ -1,0 +1,70 @@
+﻿@model Celular
+
+@{
+    ViewData["Title"] = "Excluir Celular";
+}
+
+<div class="container text-center">
+    <h2 class="text-danger fw-bold">⚠️ Confirmar Exclusão</h2>
+    <p class="text-muted">Tem certeza que deseja excluir este Celular? Esta ação não pode ser desfeita.</p>
+
+    <div class="confirm-card p-4">
+        <h4 class="mb-3 text-white fw-bold">Detalhes do Celular</h4>
+        <ul class="list-unstyled text-white">
+            <li><strong>Marca:</strong> @Model.Marca</li>
+            <li><strong>Modelo:</strong> @Model.Modelo</li>
+            <li><strong>Preço:</strong> R$ @Model.Preco</li>
+            <li><strong>Data de Fabricação:</strong> @Model.DataFabricacao.ToString("dd/MM/yyyy")</li>
+        </ul>
+    </div>
+
+    <div class="mt-4 d-flex justify-content-center gap-3">
+        <form asp-action="ExcluirConfirmado" method="post">
+            <input type="hidden" asp-for="Id" />
+            <button type="submit" class="btn btn-delete">🗑 Confirmar</button>
+        </form>
+        <a asp-action="Index" class="btn btn-cancel">❌ Cancelar</a>
+    </div>
+</div>
+
+<style>
+    .confirm-card {
+        background: linear-gradient(135deg, #FF7043, #F4511E);
+        border-radius: 12px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        padding: 25px;
+        color: white;
+    }
+
+    .btn-delete {
+        background: #D84315;
+        color: white;
+        padding: 12px 24px;
+        font-size: 18px;
+        border-radius: 8px;
+        font-weight: bold;
+        border: none;
+        transition: 0.3s;
+    }
+
+        .btn-delete:hover {
+            background: #BF360C;
+            transform: scale(1.05);
+        }
+
+    .btn-cancel {
+        background: #6C757D;
+        color: white;
+        padding: 12px 24px;
+        font-size: 18px;
+        border-radius: 8px;
+        font-weight: bold;
+        text-decoration: none;
+        transition: 0.3s;
+    }
+
+        .btn-cancel:hover {
+            background: #5A6268;
+            transform: scale(1.05);
+        }
+</style>
