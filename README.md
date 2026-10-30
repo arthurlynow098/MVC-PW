@@ -1,48 +1,49 @@
 <p align="center">
-  <img src="assets/banner-v2.png" alt="MVC-PW" width="100%">
+  <img src="assets/identity/banner.png" alt="MVC-PW" width="100%">
 </p>
 
 <p align="center">Estudo de aplicações MVC com cadastro de veículos, dispositivos móveis e eventos.</p>
 
-<p align="center"><img src="assets/docs/tags.svg" alt="C# · ASP.NET Core · MVC" width="100%"></p>
 
 <p align="center"><a href="#visão-geral">Visão geral</a> &nbsp;·&nbsp; <a href="#recursos">Recursos</a> &nbsp;·&nbsp; <a href="#como-explorar">Como explorar</a></p>
 
----
+<p align="center"><img src="assets/identity/divider.svg" alt="" width="100%"></p>
 
 <a id="explore-o-projeto"></a>
 
-![Explore o projeto](assets/docs/section-01.svg)
+## Por onde começar
 
-![Mapa visual dos arquivos e responsabilidades](assets/docs/map.svg)
 
-<table width="100%">
-<tr><th align="left">Área</th><th align="left">O que você encontra</th><th align="left">Acesso direto</th></tr>
-<tr><td><strong>Controlador</strong></td><td>Ações relacionadas ao cadastro de carros.</td><td><a href="Controllers/CarroController.cs">Abrir controlador →</a></td></tr>
-<tr><td><strong>Modelo</strong></td><td>Estrutura de dados do domínio.</td><td><a href="Models/Carro.cs">Abrir modelo →</a></td></tr>
-<tr><td><strong>Telas</strong></td><td>Views Razor para consultar e editar carros.</td><td><a href="Views/Carro">Abrir telas →</a></td></tr>
-</table>
+- **[Controlador](Controllers/CarroController.cs)** — Ações relacionadas ao cadastro de carros.
+- **[Modelo](Models/Carro.cs)** — Estrutura de dados do domínio.
+- **[Telas](Views/Carro)** — Views Razor para consultar e editar carros.
+
 
 <a id="visão-geral"></a>
 
-![Visão geral](assets/docs/section-02.svg)
+## Visão geral
 
 A aplicação implementa operações completas de **Listagem (Index), Cadastro (Cadastrar), Edição (Editar), Visualização (Visualizar) e Exclusão (Excluir)** para três contextos distintos: **Carros**, **Celulares** e **Eventos**.
 
 <a id="recursos"></a>
 
-![Recursos](assets/docs/section-03.svg)
+## Recursos
 
-| Recurso | Como funciona |
-|---|---|
-| Domínio de Veículos (Carro) | Modelo tipado, CarroController e 5 views Razor dedicadas ao ciclo completo de gerenciamento. |
-| Domínio de Dispositivos (Celular) | Estrutura paralela de telas e modelo para catalogação e manutenção de aparelhos móveis. |
-| Domínio de Agenda (Evento) | Modelagem e telas para registro, consulta e edição de eventos. |
-| Roteamento Convencional MVC | Program.cs configura o pipeline HTTP e o mapeamento padrão {controller=Home}/{action=Index}/{id?}. |
+**Domínio de Veículos (Carro)**<br>
+Modelo tipado, CarroController e 5 views Razor dedicadas ao ciclo completo de gerenciamento.
+
+**Domínio de Dispositivos (Celular)**<br>
+Estrutura paralela de telas e modelo para catalogação e manutenção de aparelhos móveis.
+
+**Domínio de Agenda (Evento)**<br>
+Modelagem e telas para registro, consulta e edição de eventos.
+
+**Roteamento Convencional MVC**<br>
+Program.cs configura o pipeline HTTP e o mapeamento padrão {controller=Home}/{action=Index}/{id?}.
 
 <a id="tecnologias"></a>
 
-![Tecnologias](assets/docs/section-04.svg)
+## Tecnologias
 
 - **C# & ASP.NET Core MVC** para controladores e entidades de negócio;
 - **Razor Engine (.cshtml)** para renderização dinâmica de HTML no servidor;
@@ -68,7 +69,7 @@ flowchart LR
 ```text
 MVC-PW/
 ├── assets/
-│   └── banner-v2.png               Banner do projeto
+│   └── identity/banner.png               Banner do projeto
 ├── Controllers/                    Controladores de rota (CarroController, etc.)
 ├── Models/                         Classes Carro.cs, Celular.cs, Evento.cs e ErrorViewModel.cs
 ├── Views/
@@ -84,7 +85,7 @@ MVC-PW/
 
 <a id="como-explorar"></a>
 
-![Como explorar](assets/docs/section-05.svg)
+## Como explorar
 
 1. Clone o repositório:
    ```powershell
@@ -93,7 +94,7 @@ MVC-PW/
    ```
 2. Abra a solução MVC-PW.sln no **Visual Studio** para navegar entre os Models, Controllers e Views de cada módulo.
 
----
+<p align="center"><img src="assets/identity/divider.svg" alt="" width="100%"></p>
 
 <p align="center">
   <a href="https://github.com/arthurlynow098">GitHub</a> &nbsp;·&nbsp;
