@@ -1,24 +1,26 @@
 <p align="center">
-  <img src="assets/banner.png" alt="MVC Web — ASP.NET Core" width="100%">
+  <img src="assets/project-animal.png" alt="Emblema de MVC-PW" width="144" height="144">
 </p>
+
+<h1 align="center">MVC-PW</h1>
+
+<p align="center">Estudo de aplicações MVC com cadastro de veículos, dispositivos móveis e eventos.</p>
 
 <p align="center">
-  Aplicação web em ASP.NET Core MVC que demonstra a separação entre Models, Views Razor e Controllers em três domínios independentes.
+  <img src="https://img.shields.io/badge/C%23-C52E36?style=flat-square" alt="C#">
+  <img src="https://img.shields.io/badge/ASP.NET%20Core-24272E?style=flat-square" alt="ASP.NET Core">
+  <img src="https://img.shields.io/badge/MVC-24272E?style=flat-square" alt="MVC">
 </p>
 
-<p align="center">
-  <img alt="ASP.NET Core MVC" src="https://img.shields.io/badge/ASP.NET_Core-MVC-C52E36?style=for-the-badge&logo=dotnet&logoColor=white">
-  <img alt="C#" src="https://img.shields.io/badge/Linguagem-C%23-11120F?style=for-the-badge&logo=dotnet&logoColor=C52E36">
-  <img alt="Razor" src="https://img.shields.io/badge/Views-Razor_.cshtml-18181B?style=for-the-badge">
-</p>
+<p align="center"><a href="#visão-geral">Visão geral</a> &nbsp;·&nbsp; <a href="#recursos">Recursos</a> &nbsp;·&nbsp; <a href="#como-explorar">Como explorar</a></p>
 
-## Sobre o projeto
+---
 
-O padrão arquitetural **Model-View-Controller (MVC)** permite escalar sistemas web mantendo as regras de dados (Models), as telas de usuário (Views) e o roteamento de requisições (Controllers) estritamente separados. Este projeto foi desenvolvido na disciplina de Programação Web (Fatec/Etec Fernando Prestes) para consolidar esse fluxo na prática.
+## Visão geral
 
 A aplicação implementa operações completas de **Listagem (Index), Cadastro (Cadastrar), Edição (Editar), Visualização (Visualizar) e Exclusão (Excluir)** para três contextos distintos: **Carros**, **Celulares** e **Eventos**.
 
-## Principais recursos
+## Recursos
 
 | Recurso | Como funciona |
 |---|---|
@@ -29,35 +31,31 @@ A aplicação implementa operações completas de **Listagem (Index), Cadastro (
 
 ## Tecnologias
 
-<p>
-  <img alt="C#" src="https://img.shields.io/badge/C%23-C52E36?style=flat-square&logo=dotnet&logoColor=white">
-  <img alt="ASP.NET Core" src="https://img.shields.io/badge/ASP.NET_Core_MVC-11120F?style=flat-square&logo=dotnet&logoColor=C52E36">
-  <img alt="Razor" src="https://img.shields.io/badge/Razor_Pages-C52E36?style=flat-square&logo=html5&logoColor=white">
-  <img alt="Bootstrap" src="https://img.shields.io/badge/Bootstrap-11120F?style=flat-square&logo=bootstrap&logoColor=C52E36">
-</p>
-
 - **C# & ASP.NET Core MVC** para controladores e entidades de negócio;
 - **Razor Engine (.cshtml)** para renderização dinâmica de HTML no servidor;
 - **Ativos estáticos (wwwroot/)** com CSS e scripts de interface.
 
-## Arquitetura
+<details>
+<summary>Arquitetura</summary>
 
-`mermaid
+```mermaid
 flowchart LR
-    A[Requisição HTTP] --> B[Roteador ASP.NET Core · Program.cs]
-    B --> C[Controllers · Carro / Celular / Evento]
-    C <--> D[Models · Entidades C#]
-    C --> E[Views Razor · Index / Cadastrar / Editar / Excluir]
-    E --> F[Resposta HTML Renderizada]
-`
+    A["Requisição HTTP"] --> B["Roteador ASP.NET Core · Program.cs"]
+    B --> C["Controllers · Carro / Celular / Evento"]
+    C <--> D["Models · Entidades C#"]
+    C --> E["Views Razor · Index / Cadastrar / Editar / Excluir"]
+    E --> F["Resposta HTML Renderizada"]
+```
 
-## Estrutura do repositório
+</details>
 
-`	ext
+<details>
+<summary>Estrutura do repositório</summary>
+
+```text
 MVC-PW/
 ├── assets/
-│   ├── banner.png                  Banner principal MVC Web
-│   └── project-animal.png          Símbolo do polvo
+│   └── project-animal.png          Emblema do projeto
 ├── Controllers/                    Controladores de rota (CarroController, etc.)
 ├── Models/                         Classes Carro.cs, Celular.cs, Evento.cs e ErrorViewModel.cs
 ├── Views/
@@ -67,17 +65,23 @@ MVC-PW/
 ├── wwwroot/                        Arquivos CSS, JS e bibliotecas estáticas
 ├── Program.cs                      Ponto de entrada e configuração do pipeline
 └── MVC-PW.sln                      Solução Visual Studio
-`
+```
+
+</details>
 
 ## Como explorar
 
 1. Clone o repositório:
-   `powershell
+   ```powershell
    git clone https://github.com/arthurlynow098/MVC-PW.git
    cd MVC-PW
-   `
+   ```
 2. Abra a solução MVC-PW.sln no **Visual Studio** para navegar entre os Models, Controllers e Views de cada módulo.
 
 ---
 
-<p align="center"><sub>Estudo · construção · evolução</sub><br><a href="https://github.com/arthurlynow098">Perfil</a> · <a href="https://arthurentsev.vercel.app/">Portfólio</a> · <a href="https://www.linkedin.com/in/entsevarthur/">LinkedIn</a></p>
+<p align="center">
+  <a href="https://github.com/arthurlynow098">GitHub</a> &nbsp;·&nbsp;
+  <a href="https://arthurentsev.vercel.app/">Portfólio</a> &nbsp;·&nbsp;
+  <a href="https://www.linkedin.com/in/entsevarthur/">LinkedIn</a>
+</p>
