@@ -1,8 +1,6 @@
 <p align="center">
-  <img src="assets/project-animal.png" alt="Emblema de MVC-PW" width="144" height="144">
+  <img src="assets/banner-v2.png" alt="MVC-PW" width="100%">
 </p>
-
-<h1 align="center">MVC-PW</h1>
 
 <p align="center">Estudo de aplicações MVC com cadastro de veículos, dispositivos móveis e eventos.</p>
 
