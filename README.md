@@ -4,21 +4,33 @@
 
 <p align="center">Estudo de aplicações MVC com cadastro de veículos, dispositivos móveis e eventos.</p>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/C%23-C52E36?style=flat-square" alt="C#">
-  <img src="https://img.shields.io/badge/ASP.NET%20Core-24272E?style=flat-square" alt="ASP.NET Core">
-  <img src="https://img.shields.io/badge/MVC-24272E?style=flat-square" alt="MVC">
-</p>
+<p align="center"><img src="assets/docs/tags.svg" alt="C# · ASP.NET Core · MVC" width="72%"></p>
 
 <p align="center"><a href="#visão-geral">Visão geral</a> &nbsp;·&nbsp; <a href="#recursos">Recursos</a> &nbsp;·&nbsp; <a href="#como-explorar">Como explorar</a></p>
 
 ---
 
-## Visão geral
+<a id="explore-o-projeto"></a>
+
+![Explore o projeto](assets/docs/section-01.svg)
+
+![Mapa visual dos arquivos e responsabilidades](assets/docs/map.svg)
+
+| Área | O que você encontra | Acesso direto |
+|---|---|---|
+| **Controlador** | Ações relacionadas ao cadastro de carros. | [Abrir controlador →](Controllers/CarroController.cs) |
+| **Modelo** | Estrutura de dados do domínio. | [Abrir modelo →](Models/Carro.cs) |
+| **Telas** | Views Razor para consultar e editar carros. | [Abrir telas →](Views/Carro) |
+
+<a id="visão-geral"></a>
+
+![Visão geral](assets/docs/section-02.svg)
 
 A aplicação implementa operações completas de **Listagem (Index), Cadastro (Cadastrar), Edição (Editar), Visualização (Visualizar) e Exclusão (Excluir)** para três contextos distintos: **Carros**, **Celulares** e **Eventos**.
 
-## Recursos
+<a id="recursos"></a>
+
+![Recursos](assets/docs/section-03.svg)
 
 | Recurso | Como funciona |
 |---|---|
@@ -27,7 +39,9 @@ A aplicação implementa operações completas de **Listagem (Index), Cadastro (
 | Domínio de Agenda (Evento) | Modelagem e telas para registro, consulta e edição de eventos. |
 | Roteamento Convencional MVC | Program.cs configura o pipeline HTTP e o mapeamento padrão {controller=Home}/{action=Index}/{id?}. |
 
-## Tecnologias
+<a id="tecnologias"></a>
+
+![Tecnologias](assets/docs/section-04.svg)
 
 - **C# & ASP.NET Core MVC** para controladores e entidades de negócio;
 - **Razor Engine (.cshtml)** para renderização dinâmica de HTML no servidor;
@@ -53,7 +67,7 @@ flowchart LR
 ```text
 MVC-PW/
 ├── assets/
-│   └── project-animal.png          Emblema do projeto
+│   └── banner-v2.png               Banner do projeto
 ├── Controllers/                    Controladores de rota (CarroController, etc.)
 ├── Models/                         Classes Carro.cs, Celular.cs, Evento.cs e ErrorViewModel.cs
 ├── Views/
@@ -67,7 +81,9 @@ MVC-PW/
 
 </details>
 
-## Como explorar
+<a id="como-explorar"></a>
+
+![Como explorar](assets/docs/section-05.svg)
 
 1. Clone o repositório:
    ```powershell
