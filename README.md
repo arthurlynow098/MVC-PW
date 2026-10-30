@@ -4,7 +4,7 @@
 
 <p align="center">Estudo de aplicações MVC com cadastro de veículos, dispositivos móveis e eventos.</p>
 
-<p align="center"><img src="assets/docs/tags.svg" alt="C# · ASP.NET Core · MVC" width="72%"></p>
+<p align="center"><img src="assets/docs/tags.svg" alt="C# · ASP.NET Core · MVC" width="100%"></p>
 
 <p align="center"><a href="#visão-geral">Visão geral</a> &nbsp;·&nbsp; <a href="#recursos">Recursos</a> &nbsp;·&nbsp; <a href="#como-explorar">Como explorar</a></p>
 
@@ -16,11 +16,12 @@
 
 ![Mapa visual dos arquivos e responsabilidades](assets/docs/map.svg)
 
-| Área | O que você encontra | Acesso direto |
-|---|---|---|
-| **Controlador** | Ações relacionadas ao cadastro de carros. | [Abrir controlador →](Controllers/CarroController.cs) |
-| **Modelo** | Estrutura de dados do domínio. | [Abrir modelo →](Models/Carro.cs) |
-| **Telas** | Views Razor para consultar e editar carros. | [Abrir telas →](Views/Carro) |
+<table width="100%">
+<tr><th align="left">Área</th><th align="left">O que você encontra</th><th align="left">Acesso direto</th></tr>
+<tr><td><strong>Controlador</strong></td><td>Ações relacionadas ao cadastro de carros.</td><td><a href="Controllers/CarroController.cs">Abrir controlador →</a></td></tr>
+<tr><td><strong>Modelo</strong></td><td>Estrutura de dados do domínio.</td><td><a href="Models/Carro.cs">Abrir modelo →</a></td></tr>
+<tr><td><strong>Telas</strong></td><td>Views Razor para consultar e editar carros.</td><td><a href="Views/Carro">Abrir telas →</a></td></tr>
+</table>
 
 <a id="visão-geral"></a>
 
